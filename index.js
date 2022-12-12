@@ -28,7 +28,7 @@ app.get("/get",(req,res)=>{
 });
 
 app.post("/api/post",(req,res)=>{
-    today = date.v=date.create().format('Y-m-d');
+    today = date.create().format('Y-m-d');
     const {name,age,gender,phno,email,timing} = req.body;
     console.log(name,req.body);
     const sqlInsert = "INSERT into person (name,age,gender,phno,email,session_time,date_enrolled,fee_status)"+"VALUES(?,?,?,?,?,?,"+"'"+today+"'"+",'0'"+")";
